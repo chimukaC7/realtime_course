@@ -27,23 +27,26 @@
     @stack('styles')
 
 
-    {{-- <script src="https://js.pusher.com/8.2.0/pusher.min.js"></script>
-    <script>
-        // Enable pusher logging - don't include this in production
-        Pusher.logToConsole = false;
+{{--     <script src="https://js.pusher.com/8.2.0/pusher.min.js"></script>--}}
+{{--    <script>--}}
+{{--        // Enable pusher logging - don't include this in production--}}
+{{--        Pusher.logToConsole = false;--}}
 
-        var pusher = new Pusher("{{ env('PUSHER_APP_KEY') }}", {
-            cluster: 'mt1'
-        });
+{{--        var pusher = new Pusher("{{ env('PUSHER_APP_KEY') }}", {--}}
+{{--            cluster: 'mt1'--}}
+{{--        });--}}
 
-        var channel = pusher.subscribe('new_user_channel');
+{{--        var channel = pusher.subscribe('new_user_channel');--}}
 
-        channel.bind('App\\Events\\NewUserRegisteredEvent', function(data) {
-            console.log(data['message']);
-            $(".notificationsIcon").load(" .notificationsIcon > *");
-            $("#notificationsModal").load(" #notificationsModal > *");
-        });
-    </script> --}}
+{{--        channel.bind('App\\Events\\NewUserRegisteredEvent', function(data) {--}}
+{{--        --}}
+{{--            console.log(JSON.stringify(data));--}}
+{{--            --}}
+{{--            console.log(data['message']);--}}
+{{--            $(".notificationsIcon").load(" .notificationsIcon > *");--}}
+{{--            $("#notificationsModal").load(" #notificationsModal > *");--}}
+{{--        });--}}
+{{--    </script> --}}
 
     @vite('resources/js/app.js')
 
