@@ -13,7 +13,7 @@ class Admin extends Authenticatable
 {
     use HasApiTokens;
     use HasFactory;
-    use Notifiable;
+    use Notifiable;//needed
 
     protected $guard = 'admin';
 
