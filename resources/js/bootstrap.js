@@ -24,12 +24,14 @@ console.log("hello from bootstrap js file");
 
 window.Echo = new Echo({
     broadcaster: "pusher",
-    key: "MyCustomPusherKey",
+    // key: "MyCustomPusherKey",
+    key: process.env.MIX_PUSHER_APP_KEY,
     wsHost: window.location.hostname,
     wsPort: 6001,
     forceTLS: false,
     disableStats: true,
-    cluster: "mt1",
+    // cluster: "mt1",
+    cluster: process.env.MIX_PUSHER_APP_CLUSTER,
 });
 
 // window.Echo = new Echo({
@@ -46,7 +48,8 @@ window.Echo = new Echo({
 // });
 
 // PUBLIC CHANNEL
-window.Echo.channel(`new_user_channel`).listen(
+window.Echo.channel(`new_user_channel`)
+    .listen(
     ".App\\Events\\NewUserRegisteredEvent",
     (e) => {
         console.log(e);
@@ -56,6 +59,7 @@ window.Echo.channel(`new_user_channel`).listen(
 );
 
 // PRIVATE CHANNEL
+// multiple events on teh same channel
 // window.Echo.private(`new_user_channel`)
 //     .listen(".App\\Events\\NewUserRegisteredEvent", (e) => {
 //         console.log(e);

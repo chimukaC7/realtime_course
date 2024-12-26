@@ -26,7 +26,7 @@
     <link rel="stylesheet" href="{{ asset('assets') }}/css/app-dark.css" id="darkTheme" disabled>
     @stack('styles')
 
-
+{{--WHEN USING PUSHER--}}
 {{--     <script src="https://js.pusher.com/8.2.0/pusher.min.js"></script>--}}
 {{--    <script>--}}
 {{--        // Enable pusher logging - don't include this in production--}}
