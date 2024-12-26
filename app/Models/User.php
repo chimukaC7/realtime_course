@@ -13,7 +13,7 @@ use Illuminate\Foundation\Auth\User as Authenticatable;
 
 class User extends Authenticatable
 {
-    // use BroadcastsEvents;
+    // use BroadcastsEvents;//prepare model to broadcasting
     use HasApiTokens, HasFactory, Notifiable;
 
     /**
@@ -70,7 +70,7 @@ class User extends Authenticatable
     ##--------------------------------- SCOPES
 
 
-    ##--------------------------------- ACCESSORS & MUTATORS    
+    ##--------------------------------- ACCESSORS & MUTATORS
     /**
      * Interact with the user's password
      *
@@ -100,6 +100,7 @@ class User extends Authenticatable
     //     ];
     // }
 
+    //control broadcasting names
     // public function broadcastAs(string $event): string|null
     // {
     //     return match ($event) {
@@ -110,7 +111,8 @@ class User extends Authenticatable
     // }
 
     // /**
-    //  * Get the data to broadcast for the model.
+    //  Control broadcasting data
+    //  Get the data to broadcast for the model.
     //  *
     //  * @return array<string, mixed>
     //  */

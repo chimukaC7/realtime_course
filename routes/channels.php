@@ -29,6 +29,6 @@ use Illuminate\Support\Facades\Broadcast;
 // PRESENCE CHANNEL AUTHORIZATION
 // Broadcast::channel('admin_room_channel', function ($admin) {
 //     if ($admin->type == 'admin') {
-//         return ['name' => $admin->name];
+//         return ['name' => $admin->name];the data to expose
 //     }
 // }, ['guards' => ['admin']]);

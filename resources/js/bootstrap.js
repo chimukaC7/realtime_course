@@ -93,11 +93,25 @@ window.Echo.channel(`new_user_channel`)
 //     });
 
 // MODEL BROADCASTING
-// window.Echo.channel(`new_user_channel_from_model_broadcasting`).listen(
-//     ".UserCreated",
-//     (e) => {
+// window.Echo.channel(`new_user_channel_from_model_broadcasting`)
+//     .listen(".UserCreated",(e) => {
 //         console.log(e);
 //         $(".notificationsIcon").load(" .notificationsIcon > *");
 //         $("#notificationsModal").load(" #notificationsModal > *");
-//     }
-// );
+//     })
+//     .listen(".UserCreated",(e) => {
+//         console.log(e);
+//         $(".notificationsIcon").load(" .notificationsIcon > *");
+//         $("#notificationsModal").load(" #notificationsModal > *");
+//     })
+//     .listen(".UserUpdated",(e) => {
+//         console.log(e);
+//         $(".notificationsIcon").load(" .notificationsIcon > *");
+//         $("#notificationsModal").load(" #notificationsModal > *");
+//     })
+//     .listen(".UserDeleted",(e) => {
+//         console.log(e);
+//         $(".notificationsIcon").load(" .notificationsIcon > *");
+//         $("#notificationsModal").load(" #notificationsModal > *");
+//     })
+// ;
