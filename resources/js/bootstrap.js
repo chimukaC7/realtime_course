@@ -49,9 +49,7 @@ window.Echo = new Echo({
 
 // PUBLIC CHANNEL
 window.Echo.channel(`new_user_channel`)
-    .listen(
-    ".App\\Events\\NewUserRegisteredEvent",
-    (e) => {
+    .listen(".App\\Events\\NewUserRegisteredEvent",(e) => {
         console.log(e);
         $(".notificationsIcon").load(" .notificationsIcon > *");
         $("#notificationsModal").load(" #notificationsModal > *");
